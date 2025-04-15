@@ -1,11 +1,11 @@
-import { validateFile } from './fileValidation';
+import { validateFile } from './fileValidation.js';
 import { 
   validPdfFile, 
   validDocxFile,
   invalidTypeFile,
   oversizedFile,
   emptyFile
-} from './testing/mockFiles';
+} from './testing/mockFiles.js';
 
 describe('File Validation', () => {
   test('accepts valid PDF files', () => {

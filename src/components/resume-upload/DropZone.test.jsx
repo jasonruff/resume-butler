@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react';
-import DropZone from './DropZone';
+import { jest } from '@jest/globals';
+import DropZone from './DropZone.jsx';
 
 describe('DropZone Component', () => {
   const mockProps = {

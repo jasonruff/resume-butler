@@ -1,7 +1,9 @@
 import { render, screen } from '@testing-library/react';
-import { ResumeProvider, useResume } from './ResumeContext';
-import { act } from 'react-dom/test-utils';
-import { validPdfFile } from '../utils/testing/mockFiles';
+import { jest, describe, test, expect } from '@jest/globals';
+import React from 'react';
+import { act } from 'react';
+import { ResumeProvider, useResume } from './ResumeContext.jsx';
+import { validPdfFile } from '../utils/testing/mockFiles.js';
 
 // Test component that uses the resume context
 function TestComponent() {

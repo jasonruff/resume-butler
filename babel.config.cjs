@@ -1,3 +1,4 @@
+// CommonJS format for Babel configuration
 module.exports = {
   presets: [
     ['@babel/preset-env', { 
