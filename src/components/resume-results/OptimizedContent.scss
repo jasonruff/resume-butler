@@ -1,0 +1,116 @@
+@import '../../styles/global.scss';
+
+.optimized-content {
+  &__empty {
+    padding: 1rem;
+    text-align: center;
+    color: var(--color-text-secondary);
+  }
+  
+  &__selector {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    
+    &-label {
+      font-size: 0.875rem;
+      margin-right: 0.5rem;
+      color: var(--color-text-secondary);
+    }
+    
+    &-dropdown {
+      flex: 1;
+      padding: 0.5rem;
+      border: 1px solid var(--color-border);
+      border-radius: var(--border-radius-md);
+      font-size: 0.875rem;
+      
+      &:focus {
+        outline: none;
+        border-color: var(--color-primary);
+        box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.1);
+      }
+    }
+  }
+  
+  &__comparison {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+  
+  &__column {
+    flex: 1;
+    
+    &-header {
+      font-size: 0.875rem;
+      margin-bottom: 0.5rem;
+      color: var(--color-text-secondary);
+      
+      &--optimized {
+        color: var(--color-primary);
+      }
+    }
+  }
+  
+  &__content-box {
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-md);
+    padding: 1rem;
+    background-color: var(--color-bg-secondary);
+    min-height: 200px;
+    max-height: 300px;
+    overflow-y: auto;
+    
+    &--optimized {
+      border-color: var(--color-primary-light);
+      background-color: rgba(79, 70, 229, 0.05);
+    }
+  }
+  
+  &__text {
+    margin: 0;
+    font-family: inherit;
+    white-space: pre-wrap;
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+  
+  &__not-found {
+    color: var(--color-text-secondary);
+    font-style: italic;
+    font-size: 0.875rem;
+  }
+  
+  &__actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  
+  &__action-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-md);
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    color: var(--color-text);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    
+    &:hover {
+      background-color: var(--color-bg-hover);
+    }
+    
+    svg {
+      color: var(--color-primary);
+    }
+  }
+}

@@ -1,0 +1,116 @@
+@import '../../styles/global.scss';
+
+.resume-parser {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  &__progress {
+    width: 100%;
+    
+    &-track {
+      width: 100%;
+      height: 8px;
+      background-color: var(--color-bg-secondary);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    
+    &-bar {
+      height: 100%;
+      background-color: var(--color-primary);
+      transition: width 0.3s ease;
+    }
+    
+    &-text {
+      margin-top: 0.5rem;
+      font-size: 0.875rem;
+      text-align: center;
+      color: var(--color-text-secondary);
+    }
+  }
+  
+  &__error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: var(--color-error-bg);
+    border-radius: 0.5rem;
+    text-align: center;
+    
+    svg {
+      margin-bottom: 1rem;
+    }
+    
+    h3 {
+      color: var(--color-error);
+      font-size: 1.125rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    p {
+      color: var(--color-text);
+      margin-bottom: 1.5rem;
+    }
+  }
+  
+  &__retry-btn {
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.25rem;
+    font-weight: 500;
+    cursor: pointer;
+    
+    &:hover {
+      background-color: var(--color-primary-dark);
+    }
+  }
+  
+  &__success {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: var(--color-success-bg);
+    border-radius: 0.5rem;
+    text-align: center;
+    
+    svg {
+      margin-bottom: 1rem;
+    }
+    
+    h3 {
+      color: var(--color-success);
+      font-size: 1.125rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    p {
+      color: var(--color-text);
+    }
+  }
+  
+  &__waiting {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    
+    p {
+      color: var(--color-text-secondary);
+    }
+  }
+}

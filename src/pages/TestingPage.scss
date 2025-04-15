@@ -1,0 +1,126 @@
+@import '../styles/global.scss';
+
+.testing-page {
+  padding: 2rem;
+  
+  &__container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+    padding: 2rem;
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+  }
+  
+  p {
+    color: var(--color-text-secondary);
+    margin-bottom: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--color-text);
+  }
+  
+  &__status {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: var(--color-bg-secondary);
+    border-radius: var(--border-radius-md);
+  }
+  
+  &__status-item {
+    display: flex;
+    margin-bottom: 0.5rem;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  &__status-label {
+    width: 120px;
+    font-weight: 500;
+  }
+  
+  &__status-indicator {
+    padding: 0.25rem 0.5rem;
+    background-color: #e5e7eb;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    
+    &--active {
+      background-color: var(--color-primary);
+      color: white;
+    }
+  }
+  
+  &__actions {
+    margin-bottom: 2rem;
+  }
+  
+  &__buttons, &__nav-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  &__button, &__nav-button {
+    padding: 0.75rem 1rem;
+    border-radius: var(--border-radius-md);
+    font-size: 0.875rem;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+  
+  &__button {
+    background-color: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    color: var(--color-text);
+    
+    &:hover:not(:disabled) {
+      background-color: var(--color-bg-hover);
+    }
+    
+    &--primary {
+      background-color: var(--color-primary);
+      border-color: var(--color-primary);
+      color: white;
+      grid-column: 1 / -1;
+      
+      &:hover:not(:disabled) {
+        background-color: var(--color-primary-dark);
+      }
+    }
+  }
+  
+  &__nav-button {
+    background-color: var(--color-primary-light);
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    &:hover {
+      background-color: var(--color-primary);
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "atsScore": 85,
+  "feedback": [
+    {
+      "section": "Skills",
+      "issue": "Missing keywords",
+      "suggestion": "Consider adding industry-specific keywords like 'project management', 'agile', and 'scrum'",
+      "priority": "high"
+    },
+    {
+      "section": "Experience",
+      "issue": "Bullet points too verbose",
+      "suggestion": "Shorten bullet points to 1-2 lines focused on achievements with metrics",
+      "priority": "medium"
+    },
+    {
+      "section": "Education",
+      "issue": "Formatting inconsistency",
+      "suggestion": "Use consistent date format throughout all sections",
+      "priority": "low"
+    }
+  ],
+  "optimizedContent": {
+    "sections": [
+      {
+        "title": "Skills",
+        "content": "Project Management • Agile Methodology • Scrum • Team Leadership • Strategic Planning • Budget Management • Risk Analysis • Stakeholder Communication • Microsoft Office Suite • Jira • Confluence"
+      },
+      {
+        "title": "Experience",
+        "content": "PROJECT MANAGER\nXYZ Technology Solutions | 2018 - Present\n• Led 12 successful product launches, increasing company revenue by 28%\n• Managed cross-functional teams of 5-15 members across 3 time zones\n• Reduced project delivery time by 15% through implementation of agile methodologies"
+      },
+      {
+        "title": "Education",
+        "content": "MBA, Business Administration\nUniversity of California, Berkeley | 2016 - 2018\n\nBS, Computer Science\nStanford University | 2012 - 2016"
+      }
+    ]
+  },
+  "keywordAnalysis": {
+    "missingKeywords": ["project management", "agile", "scrum", "stakeholder communication"],
+    "recommendedAdditions": ["kanban", "PMP certification", "budget optimization"]
+  }
+}

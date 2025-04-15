@@ -1,0 +1,87 @@
+@import '../../styles/global.scss';
+
+.score-card {
+  background-color: white;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  
+  &__header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    
+    h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+      color: var(--color-primary);
+    }
+    
+    p {
+      color: var(--color-text-secondary);
+      font-size: 0.875rem;
+    }
+  }
+  
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  &__chart {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: conic-gradient(
+      var(--score-color) 0% var(--score-percentage), 
+      #e5e7eb var(--score-percentage) 100%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background-color: white;
+    }
+    
+    &-value {
+      position: relative;
+      display: flex;
+      align-items: baseline;
+      z-index: 1;
+      color: var(--score-color);
+    }
+    
+    &-number {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+    
+    &-percent {
+      font-size: 1.25rem;
+      font-weight: 500;
+      margin-left: 0.25rem;
+    }
+  }
+  
+  &__rating {
+    font-size: 1.125rem;
+    
+    &-label {
+      color: var(--color-text-secondary);
+      margin-right: 0.5rem;
+    }
+    
+    &-value {
+      font-weight: 600;
+    }
+  }
+}

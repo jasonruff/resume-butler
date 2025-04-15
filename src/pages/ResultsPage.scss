@@ -1,0 +1,162 @@
+@import '../styles/global.scss';
+
+.results-page {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  
+  &__header {
+    text-align: center;
+    margin-bottom: 2rem;
+    
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      
+      @include mobile {
+        font-size: 1.5rem;
+      }
+    }
+    
+    p {
+      color: var(--color-text-secondary);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
+  
+  &__content {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+    
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  &__section {
+    background-color: white;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-sm);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    
+    h2 {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      color: var(--color-primary);
+    }
+  }
+  
+  &__loading {
+    text-align: center;
+    padding: 4rem 2rem;
+    
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    p {
+      color: var(--color-text-secondary);
+    }
+    
+    &-spinner {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      margin: 1.5rem auto;
+      border: 3px solid rgba(0, 0, 0, 0.1);
+      border-radius: 50%;
+      border-top-color: var(--color-primary);
+      animation: spin 1s ease-in-out infinite;
+    }
+    
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  }
+  
+  &__error {
+    text-align: center;
+    padding: 3rem 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--color-error-bg);
+    border-radius: var(--border-radius-lg);
+    
+    h2 {
+      color: var(--color-error);
+      margin-bottom: 1rem;
+    }
+    
+    p {
+      margin-bottom: 1.5rem;
+    }
+  }
+  
+  &__retry-btn {
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.25rem;
+    font-weight: 500;
+    cursor: pointer;
+    
+    &:hover {
+      background-color: var(--color-primary-dark);
+    }
+  }
+  
+  &__actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  &__action-btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.25rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    
+    &--primary {
+      background-color: var(--color-primary);
+      color: white;
+      border: none;
+      
+      &:hover {
+        background-color: var(--color-primary-dark);
+      }
+    }
+    
+    &--secondary {
+      background-color: white;
+      color: var(--color-primary);
+      border: 1px solid var(--color-primary);
+      
+      &:hover {
+        background-color: var(--color-bg-hover);
+      }
+    }
+    
+    @include mobile {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+}
