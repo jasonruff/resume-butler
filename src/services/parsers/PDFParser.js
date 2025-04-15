@@ -1,8 +1,8 @@
 import * as pdfjs from 'pdfjs-dist';
+import { GlobalWorkerOptions } from 'pdfjs-dist/build/pdf';
 
-// Set the PDF.js worker source (in a real app, this would be a proper URL to the worker)
-// For development, we'll simulate this with a placeholder
-const PDFJS_WORKER_SRC = '/pdf.worker.min.js';
+// Set the worker URL to the bundled worker file
+const PDFJS_WORKER_SRC = new URL('pdfjs-dist/build/pdf.worker.min.js', import.meta.url).toString();
 
 /**
  * Service for parsing PDF files
@@ -13,9 +13,8 @@ export class PDFParser {
    * @private
    */
   static _init() {
-    if (!pdfjs.GlobalWorkerOptions.workerSrc) {
-      // In a real application, set this to the actual worker URL
-      pdfjs.GlobalWorkerOptions.workerSrc = PDFJS_WORKER_SRC;
+    if (!GlobalWorkerOptions.workerSrc) {
+      GlobalWorkerOptions.workerSrc = PDFJS_WORKER_SRC;
     }
   }
   
@@ -46,7 +45,7 @@ export class PDFParser {
         
         // Concatenate text items with proper spacing
         const pageText = content.items.map(item => item.str).join(' ');
-        textContent += pageText + '\\n\\n';
+        textContent += pageText + '\n\n';
       }
       
       return textContent.trim();
